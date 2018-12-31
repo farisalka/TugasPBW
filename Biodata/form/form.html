@@ -1,0 +1,79 @@
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="http://localhost/bootstrap/style.css">
+    <script>
+            function validasi() {
+                var xname = document.myForm.nama.value;
+                if (xname == "") {
+                    alert("Nama tidak boleh kosong!");
+                    return false;
+                }
+
+                var xpass = document.myForm.password.value;
+                if (xpass == "") {
+                    alert("Password tidak boleh kosong!");
+                    return false;
+                }
+
+                var xdesc = document.myForm.deskripsi.value;
+                if (xdesc == "") {
+                    alert("Komentar Deskripsi tidak boleh kosong!");
+                    return false;
+                }
+            }
+            </script>
+	<title>Form Penerima</title>
+	</head>
+	
+    <body>
+        <form  name="myForm" action="form2.php" method="post" onSubmit="return validasi()">
+        <table align="center" cellspacing="40" bgcolor="#E6E6FA">
+            <tr>
+                <td colspan="2"><div align="center" class="white"><font face="sans-serif" size="20">
+                        Pendaftaran Admin </font></div></td>
+            </tr>
+            <form action="form2.php" method="GET" align="center">
+            <tr>
+                    <td>Nama</td>
+                    <td><input type="text" name="nama" placeholder="Nama" size=20></td>
+            </tr>
+            <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" placeholder="Kata Sandi" size=20></td>
+            </tr>
+            <tr>
+                    <td>Jenis Kelamin</td>
+                    <td><input type="radio" name="jenis_kelamin" value="laki-laki" checked/> Laki-laki
+                        <input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</td>
+            </tr>
+            <tr>
+                    <td>Keahlian</td>
+                    <td><input type="checkbox" name="keahlian" value="Menembak"/> Menembak
+                        <input type="checkbox" name="keahlian1" value="Berpedang" checked/> Berpedang
+                        <input type="checkbox" name="keahlian2" value="Berenang"/> Berenang</td>
+            </tr>
+            <tr>
+                    <td>Tempat Lahir</td>
+                    <td><select name="tempat_lahir">
+                            <option>---------</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Semarang">Semarang</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Yogyakarta">Yogyakarta</option>
+                        </select></td>
+            </tr>
+            <tr>
+                    <td>Deskripsi </td>
+                    <td><textarea name="deskripsi" rows="5" cols="20"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Daftar">
+                    <input type="reset" value="Reset"></td>
+            </tr>
+        </form>
+    </table>
+    </body>
+    
+</html>

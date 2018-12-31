@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<hrml>
+    <head>
+
+    </head>
+    <body>
+        <h2>Convert a string written in JSON format, into a Javascipt object</h2>
+        NAMA    :<b id="demo"></b></body><br>
+        USIA    :<b id="demo1"></b></body><br>
+        KOTA    :<b id="demo2"></b></body><br>
+    
+        <script>
+            var myJSON = '{"name":"John", "age":31, "city":"New York"}';
+            var myObj = JSON.parse(myJSON);
+            document.getElementById("demo").innerHTML = myObj.name;
+            document.getElementById("demo1").innerHTML = myObj.age; 
+            document.getElementById("demo2").innerHTML = myObj.city;
+        </script>
+    </body>
+</hrml>
